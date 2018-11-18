@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Jogo;
+use App\Http\Resources\Jogo as JogoResource;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,11 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::middleware('cors:api')->get('/jogos', function (Request $request) {
+    
+    $resource = new JogoResource(Jogo::all());
+    //dd($resource->toJson());
+    return $resource->toJson();
 });
