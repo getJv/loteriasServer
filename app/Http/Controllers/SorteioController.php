@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Jogo;
+use App\Sorteio;
 use Illuminate\Http\Request;
 
-
-class JogoController extends Controller
+class SorteioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +14,9 @@ class JogoController extends Controller
      */
     public function index()
     {
-        $jogos = Jogo::with('concurso','jogotipo')->get();
-        //dd($jogos);
-        return view('jogos.index', ['jogos' => $jogos ]);
-
+        $sorteios = Sorteio::with('concurso')->get();
+        //dd($sorteios);
+        return view('sorteios.index', ['sorteios' => $sorteios ]);
     }
 
     /**
@@ -45,10 +43,10 @@ class JogoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Jogo  $jogo
+     * @param  \App\Sorteio  $sorteio
      * @return \Illuminate\Http\Response
      */
-    public function show(Jogo $jogo)
+    public function show(Sorteio $sorteio)
     {
         //
     }
@@ -56,10 +54,10 @@ class JogoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Jogo  $jogo
+     * @param  \App\Sorteio  $sorteio
      * @return \Illuminate\Http\Response
      */
-    public function edit(Jogo $jogo)
+    public function edit(Sorteio $sorteio)
     {
         //
     }
@@ -68,10 +66,10 @@ class JogoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Jogo  $jogo
+     * @param  \App\Sorteio  $sorteio
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Jogo $jogo)
+    public function update(Request $request, Sorteio $sorteio)
     {
         //
     }
@@ -79,10 +77,10 @@ class JogoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Jogo  $jogo
+     * @param  \App\Sorteio  $sorteio
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Jogo $jogo)
+    public function destroy(Sorteio $sorteio)
     {
         //
     }

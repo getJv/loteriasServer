@@ -14,14 +14,16 @@ class CreateConcursoTable extends Migration
     public function up()
     {
         Schema::create('concursos', function (Blueprint $table) {
-            //$table->engine = 'MyISAM';
-            $table->integer('concurso')->unsigned();
+            
+            $table->integer('id')->unsigned();
             $table->integer('ano')->unsigned();
-            $table->timestamps();
-            $table->primary(['concurso', 'ano']);
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            
+            $table->primary(['id', 'ano']);
             
        });
-        //DB::statement('ALTER TABLE concurso MODIFY id INTEGER NOT NULL AUTO_INCREMENT');
+        
 
         
     }

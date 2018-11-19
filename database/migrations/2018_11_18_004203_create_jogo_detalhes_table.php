@@ -17,7 +17,8 @@ class CreateJogoDetalhesTable extends Migration
             $table->increments('id');
             $table->integer('jogo_id')->unsigned();
             $table->json('dezenas');
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
 
             $table->foreign('jogo_id')->references('id')->on('jogos')->onDelete('cascade');
         });

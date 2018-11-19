@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Concurso extends Model
 {
-    protected $fillable = ['concurso'];
+    public function sorteio(){
+
+        return $this->hasOne('App\Sorteio');
+
+    } 
 }

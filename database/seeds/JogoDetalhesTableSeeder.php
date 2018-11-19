@@ -15,8 +15,17 @@ class JogoDetalhesTableSeeder extends Seeder
         DB::table('jogo_detalhes')->insert([
             'jogo_id'  => 1,
             'dezenas'  => $valores,
-            
-    ]);
+        ]);
+        $valores = '{"dezenas": "05,08,09,40,05,70"}';
+        DB::table('jogo_detalhes')->insert([
+            'jogo_id'  => 2,
+            'dezenas'  => $valores,
+        ]);
+        $valores = '{"dezenas": "15,18,59,41,05,60"}';
+        DB::table('jogo_detalhes')->insert([
+            'jogo_id'  => 3,
+            'dezenas'  => $valores,
+        ]);
 
        
     }

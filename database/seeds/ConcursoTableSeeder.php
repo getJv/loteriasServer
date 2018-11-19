@@ -15,12 +15,12 @@ class ConcursoTableSeeder extends Seeder
         //$collection = collect([1, 2, 3, 4, 5,6,7,8,9]);
         //$concurso = $collection->random(4)->implode('');
         DB::table('concursos')->insert([
-            'concurso' => 1214,
+            'id' => 1214,
             'ano' => 2018
            
         ]);
         DB::table('concursos')->insert([
-            'concurso' => 2823,
+            'id' => 2823,
             'ano' => 2018
            
         ]);

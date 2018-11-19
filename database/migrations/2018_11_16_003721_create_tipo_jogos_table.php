@@ -15,10 +15,11 @@ class CreateTipoJogosTable extends Migration
     {
         Schema::create('jogo_tipos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('jogo_tipo');
+            $table->string('nome');
             $table->json('valores');
             $table->json('dias_de_sorteio');
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
         });
     }
 

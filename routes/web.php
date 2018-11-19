@@ -18,3 +18,4 @@ Route::get('/', function () {
 
 Route::get('/', 'JogoController@index');
 Route::resource('jogos', 'JogoController');
+Route::resource('sorteios', 'SorteioController');

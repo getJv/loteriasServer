@@ -25,7 +25,7 @@ class TipoJogoTableSeeder extends Seeder
                         ,"15": 24.50
                     }';
         DB::table('jogo_tipos')->insert([
-            'jogo_tipo'      => 'Mega-sena',
+            'nome'      => 'Mega-sena',
             'valores'           => $valores,
             'dias_de_sorteio'   => '{"dias": "2,4,6" }'
            

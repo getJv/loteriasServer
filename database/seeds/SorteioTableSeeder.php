@@ -13,7 +13,7 @@ class SorteioTableSeeder extends Seeder
     {
         $valores = '{"dezenas": "01,02,03,04,05,06"}';
         DB::table('sorteios')->insert([
-            'concurso'      => 1214,
+            'concurso_id'      => 1214,
             //'ano'           => 2018,
             'dezenas'       => $valores,
             'local'         => 'Luziania - GO',
@@ -21,7 +21,7 @@ class SorteioTableSeeder extends Seeder
         ]);
 
         DB::table('sorteios')->insert([
-            'concurso'      => 2823,
+            'concurso_id'      => 2823,
             //'ano'           => 2018,
             'dezenas'       => $valores,
             'local'         => 'São Paulo - SP',
