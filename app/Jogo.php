@@ -6,6 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jogo extends Model
 {
+
+    public $casts = [
+        'created_at' => 'datetime:d/m/Y',
+        'updated_at' => 'datetime:d/m/Y',
+        
+    ];
+
     public function concurso(){
 
         return $this->belongsTo('App\Concurso');

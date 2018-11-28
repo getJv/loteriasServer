@@ -8,7 +8,12 @@ class JogoDetalhe extends Model
 {
 
     //coloca o json pra ficar interavel.
-    public $casts = ['dezenas' => 'json'];
+    public $casts = [
+        
+        'dezenas' => 'json'
+    ];
+
+    
 
     public function jogo(){
 

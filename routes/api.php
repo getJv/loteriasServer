@@ -20,8 +20,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::middleware('cors:api')->get('/jogos', function (Request $request) {
-    $jogos = Jogo::with('concurso','jogotipo:id,nome','jogodetalhes')->get();
+
+    $jogos = Jogo::with(
+                  'concurso:id,ano',
+                  'jogotipo:id,nome,logo_cor',
+                  'jogodetalhes:jogo_id,dezenas')
+                ->select('id','concurso_id','jogo_tipo_id')
+                ->get(); 
+    
     $resource = new JogoResource($jogos);
-    //dd($resource->toJson());
+    
     return $resource->toJson();
+    
 });

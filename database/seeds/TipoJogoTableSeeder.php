@@ -11,7 +11,7 @@ class TipoJogoTableSeeder extends Seeder
      */
     public function run()
     {
-        
+         
         $valores = '{
                          "6": 3.50
                         ,"7": 24.50
@@ -27,6 +27,7 @@ class TipoJogoTableSeeder extends Seeder
         DB::table('jogo_tipos')->insert([
             'nome'      => 'Mega-sena',
             'valores'           => $valores,
+            'logo_cor'           => 'blue',
             'dias_de_sorteio'   => '{"dias": "2,4,6" }'
            
         ]);
