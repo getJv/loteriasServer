@@ -50,7 +50,7 @@ class JogoController extends Controller
      */
     public function show(Jogo $jogo)
     {
-        //
+        return Jogo::find($jogo);
     }
 
     /**

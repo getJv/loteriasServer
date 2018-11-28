@@ -33,3 +33,19 @@ Route::middleware('cors:api')->get('/jogos', function (Request $request) {
     return $resource->toJson();
     
 });
+
+Route::middleware('cors:api')->get('/jogos/{jogo}', function (Request $request,$jogo) {
+
+    $data = Jogo::with(
+        'concurso:id,ano',
+        'jogotipo:id,nome,logo_cor',
+        'jogodetalhes:jogo_id,dezenas')
+      ->select('id','concurso_id','jogo_tipo_id')
+      ->where('id',$jogo)
+      ->get();
+    
+    $resource = new JogoResource($data);
+    
+    return $resource->toJson();
+    
+});
