@@ -18,7 +18,7 @@ class CreateJogosTable extends Migration
             $table->integer('jogo_tipo_id')->unsigned();
             $table->integer('concurso_id')->unsigned();
             $table->integer('jogador_id')->unsigned();
-            $table->char('jogo_vercedor',1);
+            $table->char('jogo_vencedor',1);
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
 

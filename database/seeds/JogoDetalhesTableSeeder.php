@@ -12,37 +12,37 @@ class JogoDetalhesTableSeeder extends Seeder
     public function run()
     {
         $valores = '{
-                        "0":1,
-                        "1":2,
-                        "2":3,
-                        "3":4,
-                        "4":5,
-                        "5":6
-                    }';
+            "0":{"0":"09", "1":"false" },
+            "1":{"0":"10", "1":"true" },
+            "2":{"0":"12", "1":"true" },
+            "3":{"0":"05", "1":"true" },
+            "4":{"0":"14", "1":"false" },
+            "5":{"0":"52", "1":"false" }
+        }';
         DB::table('jogo_detalhes')->insert([
             'jogo_id'  => 1,
             'dezenas'  => $valores,
         ]);
         $valores = '{
-                    "0":5,
-                    "1":7,
-                    "2":9,
-                    "3":51,
-                    "4":48,
-                    "5":16
+            "0":{"0":"05", "1":"true" },
+            "1":{"0":"07", "1":"false" },
+            "2":{"0":"09", "1":"false" },
+            "3":{"0":"15", "1":"false" },
+            "4":{"0":"48", "1":"false" },
+            "5":{"0":"52", "1":"true" }
                 }';
         DB::table('jogo_detalhes')->insert([
             'jogo_id'  => 2,
             'dezenas'  => $valores,
         ]);
         $valores = '{
-                    "0":50,
-                    "1":27,
-                    "2":39,
-                    "3":41,
-                    "4":38,
-                    "5":26
-                }';
+            "0":{"0": "25", "1":"true" },
+            "1":{"0": "31", "1":"true" },
+            "2":{"0": "28", "1":"true" },
+            "3":{"0": "06", "1":"true" },
+            "4":{"0": "02", "1":"true" },
+            "5":{"0": "58", "1":"true" }
+        }';
         DB::table('jogo_detalhes')->insert([
             'jogo_id'  => 3,
             'dezenas'  => $valores,

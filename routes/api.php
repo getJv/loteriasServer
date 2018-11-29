@@ -25,7 +25,7 @@ Route::middleware('cors:api')->get('/jogos', function (Request $request) {
                   'concurso:id,ano',
                   'jogotipo:id,nome,logo_cor',
                   'jogodetalhes:jogo_id,dezenas')
-                ->select('id','concurso_id','jogo_tipo_id')
+                //->select('id','concurso_id','jogo_tipo_id')
                 ->get(); 
     
     $resource = new JogoResource($jogos);
