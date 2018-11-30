@@ -13,12 +13,7 @@ class Jogo extends Model
         
     ];
 
-    public function concurso(){
-
-        return $this->belongsTo('App\Concurso');
-
-    }
-
+    
     public function jogoTipo(){
 
         return $this->belongsTo('App\JogoTipo');

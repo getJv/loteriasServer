@@ -13,23 +13,30 @@ class JogoTableSeeder extends Seeder
     {
         DB::table('jogos')->insert([
                 'jogo_tipo_id'  => 1,
-                'concurso_id'      => 1214,
-                'jogador_id'    => 1,
-                'jogo_vencedor' => 'n'
+                'concurso'      => 1214,
+                'arquivado'     => 'n',
+                'conferido'     => 'n',
+                'ganhou'        => 'n',
+                'jogador_id'    => 1
+                
         ]);
 
         DB::table('jogos')->insert([
             'jogo_tipo_id'  => 1,
-            'concurso_id'    => 1214,
+            'concurso'    => 1214,
             'jogador_id'    => 1,
-            'jogo_vencedor' => 'n'
+            'arquivado'     => 's',
+            'conferido'     => 's',
+            'ganhou'        => 'n'
         ]);
 
         DB::table('jogos')->insert([
             'jogo_tipo_id'  => 1,
-            'concurso_id'     => 2823,
+            'concurso'     => 2823,
             'jogador_id'    => 1,
-            'jogo_vencedor' => 's'
+            'arquivado'     => 'n',
+            'conferido'     => 's',
+            'ganhou'        => 's'
         ]);
     }
 }
