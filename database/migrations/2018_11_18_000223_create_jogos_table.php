@@ -23,7 +23,6 @@ class CreateJogosTable extends Migration
             $table->char('arquivado',1);
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-
             $table->foreign('jogo_tipo_id')->references('id')->on('jogo_tipos')->onDelete('cascade');
         });
     }
