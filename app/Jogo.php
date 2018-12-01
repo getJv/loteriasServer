@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Sorteio;
 
 class Jogo extends Model
 {
@@ -25,5 +26,7 @@ class Jogo extends Model
         return $this->hasOne('App\JogoDetalhe');
 
     }
+
+   
 
 }

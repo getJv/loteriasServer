@@ -15,7 +15,7 @@ class JogoController extends Controller
      */
     public function index()
     {
-        $jogos = Jogo::with('concurso','jogotipo')->get();
+        $jogos = Jogo::with('jogotipo')->get();
         //dd($jogos);
         return view('jogos.index', ['jogos' => $jogos ]);
 

@@ -49,3 +49,35 @@ Route::middleware('cors:api')->get('/jogos/{jogo}', function (Request $request,$
     return $resource->toJson();
     
 });
+
+Route::middleware('cors:api')->get('/megasenas/{concurso}', function (Request $request,$concurso) {
+
+    $data = DB::table('mega_senas')
+                ->select(   
+                    'concurso',
+                    'data_sorteio',
+                    '1_dezena',
+                    '2_dezena',
+                    '3_dezena',
+                    '4_dezena',
+                    '5_dezena',
+                    '6_dezena'
+                        )
+                ->where('concurso',$concurso)
+                ->get();
+
+    $resource = new JogoResource($data);
+    
+    return $resource->toJson();
+    
+});
+
+Route::middleware('cors:api')->get('/megasenas', function (Request $request) {
+
+    $data = DB::table('mega_senas')->get();
+
+    $resource = new JogoResource($data);
+    
+    return $resource->toJson();
+    
+});
