@@ -23,7 +23,7 @@ class JogoTableSeeder extends Seeder
 
         DB::table('jogos')->insert([
             'jogo_tipo_id'  => 1,
-            'concurso'    => 1214,
+            'concurso'    => 2098,
             'jogador_id'    => 1,
             'arquivado'     => 's',
             'conferido'     => 's',
@@ -32,7 +32,7 @@ class JogoTableSeeder extends Seeder
 
         DB::table('jogos')->insert([
             'jogo_tipo_id'  => 1,
-            'concurso'     => 2823,
+            'concurso'     => 2099,
             'jogador_id'    => 1,
             'arquivado'     => 'n',
             'conferido'     => 's',
